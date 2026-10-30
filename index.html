@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sleek Kit Frizz Control – Virá</title>
+<meta name="description" content="Cera Frizz Control + Escova Finalizadora. Zero frizz, fios alinhados e brilho o dia todo.">
+<meta property="og:title" content="Sleek Kit Frizz Control – Virá">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0660/3522/0595/files/Stick_e_escova.png?v=1776651890">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#6e3cdb; --purple-2:#653bbc; --purple-deep:#542A9C; --ink:#231F20;
+  --lav:#f8edff; --lav-2:#efe0ff; --yellow:#FFBF32; --pink:#ff59b2; --teal:#108474;
+  --muted:#7B7B7B; --white:#fff; --r:22px;
+  --shadow:0 20px 50px -20px rgba(84,42,156,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--purple)}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--ink);color:#fff;font-size:13px;font-weight:600;overflow:hidden;position:relative;z-index:30}
+.topbar .inner{display:flex;align-items:center;justify-content:center;gap:14px;padding:9px 16px;flex-wrap:wrap;text-align:center}
+.topbar .tag{background:var(--yellow);color:var(--ink);padding:3px 10px;border-radius:99px;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.timer{display:inline-flex;gap:4px;font-variant-numeric:tabular-nums}
+.timer b{background:rgba(255,255,255,.14);padding:2px 6px;border-radius:6px;min-width:28px;text-align:center}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:25;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(110,60,219,.08)}
+header .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+header img{height:24px;width:auto}
+header nav{display:flex;gap:26px;font-size:14px;font-weight:600}
+header nav a{opacity:.75;transition:opacity .2s}
+header nav a:hover{opacity:1;color:var(--purple)}
+.btn-sm{background:var(--purple);color:#fff;padding:10px 18px;border-radius:99px;font-size:14px;font-weight:700;transition:transform .2s,background .2s}
+.btn-sm:hover{background:var(--purple-deep);transform:translateY(-1px)}
+@media(max-width:820px){header nav{display:none}}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:20px 28px;border-radius:18px;
+  background:linear-gradient(135deg,var(--purple) 0%,var(--purple-deep) 100%);color:#fff;font-weight:800;font-size:17px;letter-spacing:.04em;text-transform:uppercase;
+  box-shadow:0 14px 30px -10px rgba(110,60,219,.7),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden;transition:transform .2s,box-shadow .2s;isolation:isolate}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s ease-in-out infinite;z-index:-1}
+.cta:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 40px -12px rgba(110,60,219,.85)}
+.cta:active{transform:scale(.98)}
+.cta .price{background:var(--yellow);color:var(--ink);padding:6px 12px;border-radius:10px;font-size:15px;letter-spacing:0}
+.cta svg{transition:transform .25s}
+.cta:hover svg{transform:translateX(4px)}
+.cta.yellow{background:linear-gradient(135deg,#ffcf5c,var(--yellow));color:var(--ink);box-shadow:0 14px 30px -10px rgba(255,191,50,.8)}
+.cta.yellow .price{background:var(--ink);color:#fff}
+.cta.pulse{animation:pulse 2.4s infinite}
+@keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,60,219,.55),0 14px 30px -10px rgba(110,60,219,.7)}70%{box-shadow:0 0 0 16px rgba(110,60,219,0),0 14px 30px -10px rgba(110,60,219,.7)}100%{box-shadow:0 0 0 0 rgba(110,60,219,0),0 14px 30px -10px rgba(110,60,219,.7)}}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1200px 600px at 10% -10%,var(--lav-2),transparent 60%),radial-gradient(900px 500px at 110% 10%,#fff3d6,transparent 60%),var(--lav);padding:36px 0 64px}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start}
+@media(max-width:1000px){.hero .grid{grid-template-columns:1fr;gap:28px}.hero{padding-top:16px}.gallery{position:relative!important;top:0!important}}
+.hero .grid>*{min-width:0}
+.gallery{position:sticky;top:84px}
+@media(max-width:900px){.gallery{position:relative;top:0}}
+.stage{position:relative;aspect-ratio:1;border-radius:28px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .5s,transform .8s}
+.stage img.on{opacity:1;transform:scale(1)}
+.stage .badges{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;z-index:2;pointer-events:none}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:.04em}
+.pill.p{background:var(--purple);color:#fff}
+.pill.y{background:var(--yellow);color:var(--ink)}
+.pill.k{background:var(--pink);color:#fff}
+.stage .nav{position:absolute;top:50%;translate:0 -50%;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;z-index:2;box-shadow:0 6px 16px rgba(0,0,0,.12);transition:transform .2s}
+.stage .nav:hover{transform:scale(1.08)}
+.stage .prev{left:12px}.stage .next{right:12px}
+.thumbs{display:flex;gap:10px;margin-top:14px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.thumbs::-webkit-scrollbar{display:none}
+.thumbs button{flex:0 0 72px;height:72px;border-radius:14px;overflow:hidden;outline:2px solid transparent;outline-offset:2px;opacity:.6;transition:.25s;background:#fff}
+.thumbs button img{width:100%;height:100%;object-fit:cover}
+.thumbs button.on{outline-color:var(--purple);opacity:1}
+
+.info .rating{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.stars{color:var(--yellow);letter-spacing:2px;font-size:16px}
+.info h1{font-size:clamp(46px,7vw,78px);line-height:.95;margin:12px 0 6px;color:var(--purple-deep)}
+.info h1 em{color:var(--purple)}
+.info .sub{font-size:18px;color:#4b4357;font-weight:500}
+.pricebox{display:flex;align-items:flex-end;gap:14px;margin:22px 0 6px;flex-wrap:wrap}
+.pricebox .now{font-size:clamp(36px,5vw,44px);font-weight:800;color:var(--ink);line-height:1;letter-spacing:-.02em}
+.pricebox .was{font-size:18px;color:var(--muted);text-decoration:line-through;padding-bottom:5px}
+.pricebox .off{background:var(--pink);color:#fff;font-weight:800;border-radius:8px;padding:4px 9px;font-size:13px;margin-bottom:6px}
+.inst{font-size:14px;color:#4b4357}
+.inst b{color:var(--purple)}
+.perks{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
+.perks span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid rgba(110,60,219,.15);padding:8px 12px;border-radius:12px;font-size:13px;font-weight:600}
+
+/* bundles */
+.bundles{background:var(--ink);border-radius:24px;padding:18px;color:#fff;box-shadow:var(--shadow)}
+.bundles .head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.bundles .head h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.opt{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px;border-radius:16px;border:2px solid rgba(255,255,255,.12);margin-bottom:10px;cursor:pointer;transition:border-color .25s,background .25s,transform .2s}
+.opt:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.3)}
+.opt.on{border-color:var(--yellow);background:rgba(255,191,50,.08)}
+.opt .radio{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.5);display:grid;place-items:center;transition:.2s}
+.opt.on .radio{border-color:var(--yellow)}
+.opt.on .radio::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--yellow)}
+.opt .t{font-weight:700;font-size:16px}
+.opt .s{font-size:12px;opacity:.65;margin-top:2px}
+.opt .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.opt .chip{font-size:11px;font-weight:800;padding:4px 8px;border-radius:7px}
+.chip.g{background:var(--teal);color:#fff}
+.chip.w{background:rgba(255,255,255,.12)}
+.opt .pr{text-align:right}
+.opt .pr .o{font-size:13px;text-decoration:line-through;opacity:.5}
+.opt .pr .n{font-size:20px;font-weight:800;color:var(--yellow)}
+.opt .flag{position:absolute;top:-11px;left:16px;font-size:10px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:99px;text-transform:uppercase}
+.opt .flag.best{background:var(--pink);color:#fff}
+.opt .flag.eco{background:#fff;color:var(--ink)}
+.opt.has-flag{margin-top:18px}
+.gift{grid-column:1/-1;display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,rgba(255,89,178,.25),rgba(110,60,219,.25));border-radius:12px;padding:10px 12px;font-size:13px;font-weight:600;margin-top:4px;max-height:0;opacity:0;overflow:hidden;transition:.35s}
+.opt.on .gift{max-height:60px;opacity:1}
+.opt:not(.on) .gift{margin-top:-14px}
+.bundles .cta{margin-top:8px}
+.fine{font-size:11.5px;opacity:.55;margin-top:10px;line-height:1.5}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.trust div{text-align:center;font-size:12px;font-weight:600;color:#4b4357;background:#fff;border-radius:14px;padding:12px 6px}
+.trust div span{display:block;font-size:20px;margin-bottom:4px}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--purple);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.2deg);margin:-14px -20px 0;width:calc(100% + 40px);position:relative;z-index:2}
+.marquee-clip{overflow:hidden;margin-top:-14px;padding:14px 0}
+.marquee .track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite}
+.marquee span{font-family:"DM Serif Display",serif;font-size:28px;white-space:nowrap;display:flex;align-items:center;gap:48px}
+.marquee span::after{content:"✦";color:var(--yellow);font-size:20px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+@media(max-width:700px){section{padding:68px 0}}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-head h2{font-size:clamp(38px,5.5vw,62px);line-height:1;margin:10px 0 14px;color:var(--purple-deep)}
+.sec-head h2 em{color:var(--purple)}
+.sec-head p{font-size:17px;color:#4b4357;line-height:1.6}
+
+/* videos */
+.reels{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 20px;scrollbar-width:none;margin:0 auto;max-width:1180px}
+.reels::-webkit-scrollbar{display:none}
+.reel{position:relative;flex:0 0 clamp(210px,24vw,260px);aspect-ratio:9/16;border-radius:24px;overflow:hidden;scroll-snap-align:center;background:#000;box-shadow:var(--shadow);cursor:pointer;transition:transform .35s}
+.reel:hover{transform:translateY(-6px) rotate(-.6deg)}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,transparent 55%,rgba(35,31,32,.6));transition:opacity .3s}
+.reel .play i{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.reel.playing .play{opacity:0}
+.reel .snd{position:absolute;bottom:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);color:#fff;display:grid;place-items:center;z-index:2;opacity:0;transition:.3s}
+.reel.playing .snd{opacity:1}
+.reel .lbl{position:absolute;left:14px;bottom:14px;color:#fff;font-size:13px;font-weight:700;z-index:1;transition:opacity .3s}
+.reel.playing .lbl{opacity:0}
+.reel-ctrl{display:flex;justify-content:center;gap:10px;margin-top:8px}
+.round{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--purple);color:var(--purple);display:grid;place-items:center;transition:.2s}
+.round:hover{background:var(--purple);color:#fff}
+
+/* before / after */
+.ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.ba-wrap{grid-template-columns:1fr;gap:32px}}
+.ba{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1;background:var(--lav)}
+.ba img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.stat{background:var(--lav);border-radius:18px;padding:18px 12px;text-align:center}
+.stat b{display:block;font-family:"DM Serif Display",serif;font-size:40px;color:var(--purple);line-height:1;font-weight:400}
+.stat span{font-size:12.5px;font-weight:600;color:#4b4357}
+.ba-copy h2{font-size:clamp(38px,5vw,58px);line-height:1;color:var(--purple-deep);margin:10px 0 16px}
+.ba-copy p{font-size:17px;line-height:1.65;color:#4b4357}
+
+/* benefits tabs */
+.benefits{background:var(--lav)}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.tab{padding:12px 20px;border-radius:99px;background:#fff;font-weight:700;font-size:14px;border:1.5px solid rgba(110,60,219,.15);transition:.25s}
+.tab:hover{border-color:var(--purple)}
+.tab.on{background:var(--purple);color:#fff;border-color:var(--purple);box-shadow:0 10px 24px -10px rgba(110,60,219,.8)}
+.panel-wrap{position:relative;background:#fff;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}
+.panel{display:none;grid-template-columns:1fr 1fr;min-height:460px}
+.panel.on{display:grid;animation:fade .5s ease}
+@media(max-width:820px){.panel{grid-template-columns:1fr}}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .img{position:relative;background:var(--lav-2);min-height:320px}
+.panel .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .txt{padding:clamp(28px,5vw,60px);display:flex;flex-direction:column;justify-content:center}
+.panel .num{font-family:"DM Serif Display",serif;font-size:80px;line-height:.8;color:var(--lav-2);-webkit-text-stroke:1.5px var(--purple)}
+.panel h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(34px,4vw,48px);color:var(--purple-deep);margin:14px 0 14px;line-height:1}
+.panel p{font-size:16.5px;line-height:1.7;color:#4b4357}
+.panel .notes{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.panel .notes span{background:var(--lav);color:var(--purple-deep);font-weight:700;font-size:12.5px;padding:7px 12px;border-radius:99px}
+
+/* how to */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{position:relative;border-radius:26px;overflow:hidden;background:var(--lav);transition:transform .3s}
+.step:hover{transform:translateY(-6px)}
+.step .ph{aspect-ratio:4/3;overflow:hidden}
+.step .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.step:hover .ph img{transform:scale(1.06)}
+.step .bd{padding:22px 24px 26px}
+.step .bd::before{counter-increment:s;content:"0" counter(s);display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--purple);color:#fff;font-weight:800;font-size:14px;margin-bottom:12px}
+.step h4{font-family:"DM Serif Display",serif;font-weight:400;font-size:28px;color:var(--purple-deep);margin-bottom:6px}
+.step p{font-size:15px;line-height:1.6;color:#4b4357}
+
+/* chic band */
+.chic{background:var(--purple-deep);color:#fff;text-align:center;padding:110px 0;position:relative;overflow:hidden}
+.chic h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(58px,12vw,150px);line-height:.88;position:relative;z-index:1}
+.chic h2 em{color:var(--yellow)}
+.chic h2 span{display:block}
+.chic .blob{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(80px);opacity:.55}
+.chic .b1{background:var(--purple);top:-200px;left:-120px}
+.chic .b2{background:var(--pink);bottom:-260px;right:-100px;opacity:.35}
+.chic .floaty{position:absolute;width:clamp(120px,16vw,210px);border-radius:24px;box-shadow:0 30px 60px rgba(0,0,0,.35);z-index:0}
+.chic .f1{top:12%;left:4%;rotate:-10deg}
+.chic .f2{bottom:10%;right:5%;rotate:9deg}
+@media(max-width:700px){.chic .floaty{opacity:.35}}
+.chic .cta{max-width:420px;margin:40px auto 0;position:relative;z-index:1}
+
+/* reviews */
+.rv-top{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:var(--lav);border-radius:28px;padding:28px 32px;margin-bottom:28px}
+@media(max-width:760px){.rv-top{grid-template-columns:1fr;text-align:center}}
+.score b{font-family:"DM Serif Display",serif;font-weight:400;font-size:84px;color:var(--purple);line-height:.9}
+.score .stars{font-size:22px;display:block}
+.score small{font-size:13px;color:var(--muted);font-weight:600}
+.ai p{font-size:15.5px;line-height:1.65;color:#4b4357}
+.ai .lbl{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;display:block}
+.bars{margin-top:14px;display:grid;gap:6px;max-width:340px}
+@media(max-width:760px){.bars{margin-inline:auto}}
+.bar{display:grid;grid-template-columns:24px 1fr 30px;gap:8px;align-items:center;font-size:12px;font-weight:700}
+.bar i{height:7px;border-radius:9px;background:#fff;overflow:hidden;position:relative}
+.bar i::after{content:"";position:absolute;inset:0;width:var(--w);background:var(--yellow);border-radius:9px;transform-origin:left;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.in .bar i::after{transform:scaleX(1)}
+.rv-grid{columns:3 280px;column-gap:16px}
+.rv{break-inside:avoid;background:#fff;border:1px solid rgba(110,60,219,.12);border-radius:22px;padding:22px;margin-bottom:16px;transition:transform .3s,box-shadow .3s}
+.rv:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rv .who{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.rv .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;display:grid;place-items:center;font-weight:800}
+.rv .nm{font-weight:800;font-size:14px}
+.rv .vf{font-size:11px;color:var(--teal);font-weight:800}
+.rv p{font-size:15px;line-height:1.6;color:#3d3646;margin-top:8px}
+.rv h5{font-size:16px;font-weight:800;margin-top:6px}
+.rv .pics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.rv .pics img{aspect-ratio:1;object-fit:cover;border-radius:10px;cursor:zoom-in}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+details{border-bottom:1px solid rgba(110,60,219,.15);padding:4px 0}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;font-weight:700;font-size:17px;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:0 0 32px;height:32px;border-radius:50%;background:var(--lav);display:grid;place-items:center;color:var(--purple);font-size:20px;transition:transform .3s,background .3s}
+details[open] summary .pl{transform:rotate(45deg);background:var(--purple);color:#fff}
+details p{padding:0 4px 22px;font-size:15.5px;line-height:1.65;color:#4b4357}
+
+/* final */
+.final{padding:0 0 110px}
+.final .card{position:relative;border-radius:36px;overflow:hidden;background:linear-gradient(135deg,var(--purple) 0%,var(--purple-deep) 100%);color:#fff;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+@media(max-width:820px){.final .card{grid-template-columns:1fr}}
+.final .copy{padding:clamp(30px,6vw,64px)}
+.final h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(40px,5.5vw,64px);line-height:.98;margin:12px 0 16px}
+.final h2 em{color:var(--yellow)}
+.final p{opacity:.85;font-size:16px;line-height:1.6;margin-bottom:26px}
+.final .ph{height:100%;min-height:340px;position:relative}
+.final .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final .eyebrow{color:var(--yellow)}
+
+footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:40px 16px 120px;font-size:13px}
+footer img{height:22px;margin:0 auto 12px;filter:brightness(0) invert(1);opacity:.9}
+
+/* sticky bar */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:flex;align-items:center;gap:12px;background:rgba(35,31,32,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;padding:10px 10px 10px 12px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.3);transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.8,.2,1);max-width:640px;margin:0 auto}
+.sticky.show{transform:none}
+.sticky img{width:48px;height:48px;border-radius:12px;object-fit:cover;background:#fff}
+.sticky .tx{flex:1;min-width:0}
+.sticky .tx b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky .tx span{font-size:13px;color:var(--yellow);font-weight:800}
+.sticky .tx s{opacity:.5;font-weight:500;margin-left:6px;color:#fff}
+.sticky .cta{width:auto;padding:14px 20px;font-size:14px;border-radius:14px}
+@media(max-width:420px){.sticky img{display:none}.sticky .cta{padding:13px 14px}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(20,10,40,.9);z-index:60;display:none;place-items:center;padding:20px}
+.lb.on{display:grid}
+.lb img{max-height:88vh;border-radius:18px}
+
+/* toast */
+.toast{position:fixed;left:16px;bottom:96px;z-index:45;background:#fff;color:var(--ink);border-radius:16px;padding:10px 14px 10px 10px;display:flex;align-items:center;gap:10px;box-shadow:0 14px 34px rgba(84,42,156,.3);font-size:13px;max-width:300px;transform:translateX(-130%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.toast.on{transform:none}
+.toast img{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.toast b{color:var(--purple)}
+
+/* reveal */
+.rv-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv-in.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv-in{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="inner">
+  <span class="tag">Black Antecipada</span>
+  <span>15% OFF + frete grátis Sul e Sudeste · termina em</span>
+  <span class="timer" id="timer"><b id="th">00</b>:<b id="tm">00</b>:<b id="ts">00</b></span>
+</div></div>
+
+<header><div class="wrap inner">
+  <img src="https://viracosmeticos.com/cdn/shop/files/vira_laranja.png?height=46&v=1752175466" alt="Virá Cosméticos">
+  <nav>
+    <a href="#videos">Resultados</a><a href="#beneficios">Benefícios</a><a href="#como-usar">Como usar</a><a href="#avaliacoes">Avaliações</a>
+  </nav>
+  <a class="btn-sm" href="#comprar">Quero o meu</a>
+</div></header>
+
+<!-- HERO -->
+<section class="hero" id="comprar" style="padding-top:36px">
+  <div class="wrap grid">
+    <div class="gallery">
+      <div class="stage" id="stage">
+        <div class="badges"><span class="pill p">Black Antecipada</span><span class="pill k">15% OFF</span></div>
+        <button class="nav prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="nav next" aria-label="Próxima"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <div class="info">
+      <div class="rating"><span class="stars">★★★★★</span> 4.7 · <a href="#avaliacoes" style="text-decoration:underline">32 avaliações</a></div>
+      <h1 class="serif">sleek <em>kit</em></h1>
+      <p class="sub">cera frizz control + escova finalizadora</p>
+
+      <div class="pricebox">
+        <span class="now" id="nowPrice">R$ 99,90</span>
+        <span class="was" id="wasPrice">R$ 117,90</span>
+        <span class="off" id="offTag">-15%</span>
+      </div>
+      <p class="inst" id="inst">ou <b>4x de R$ 24,97</b> sem juros · ganhe <b>R$ 14,98 de cashback</b> (15%)</p>
+
+      <div class="perks">
+        <span>🚚 Frete grátis acima de R$149,90</span><span>💜 Fixa + hidrata</span><span>✨ Sem pesar</span>
+      </div>
+
+      <div class="bundles">
+        <div class="head"><h3>Compre mais, economize mais</h3><span class="pill y">Black</span></div>
+
+        <div class="opt" data-i="0" data-now="99,90" data-was="117,90" data-off="-15%" data-inst="ou <b>4x de R$ 24,97</b> sem juros · ganhe <b>R$ 14,98 de cashback</b> (15%)">
+          <span class="radio"></span>
+          <div><div class="t">1 cera + escova</div><div class="s">Para experimentar</div></div>
+          <div class="pr"><div class="o">R$ 117,90</div><div class="n">R$ 99,90</div></div>
+        </div>
+
+        <div class="opt has-flag" data-i="1" data-now="159,00" data-was="188,80" data-off="-16%" data-inst="ou <b>4x de R$ 39,75</b> sem juros · <b>economize R$ 29,80</b> + frete grátis*">
+          <span class="flag eco">Combo econômico</span>
+          <span class="radio"></span>
+          <div><div class="t">2 ceras + escova</div><div class="chips"><span class="chip g">Economize R$ 29,80</span><span class="chip w">Frete grátis*</span></div></div>
+          <div class="pr"><div class="o">R$ 188,80</div><div class="n">R$ 159,00</div></div>
+        </div>
+
+        <div class="opt has-flag on" data-i="2" data-now="199,00" data-was="277,70" data-off="-28%" data-inst="ou <b>4x de R$ 49,75</b> sem juros · <b>economize R$ 78,70</b> + brinde + frete grátis*">
+          <span class="flag best">🔥 Melhor oferta</span>
+          <span class="radio"></span>
+          <div><div class="t">3 ceras + escova</div><div class="chips"><span class="chip g">Economize R$ 78,70</span><span class="chip w">Frete grátis*</span></div></div>
+          <div class="pr"><div class="o">R$ 277,70</div><div class="n">R$ 199,00</div></div>
+          <div class="gift">🎁 Brinde: Ampola Glow Repair 15ml</div>
+        </div>
+
+        <a class="cta pulse" id="buyBtn" href="https://viracosmeticos.com/products/kit-frizz-control-cera-escova?variant=43216499376243" target="_blank" rel="noopener">
+          Comprar agora <span class="price" id="ctaPrice">R$ 199,00</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="fine">*Frete grátis para Sul e Sudeste. Uma escova por pedido: as unidades extras são só a cera.</p>
+      </div>
+
+      <div class="trust">
+        <div><span>🔒</span>Compra 100% segura</div>
+        <div><span>💳</span>Até 4x sem juros</div>
+        <div><span>💸</span>15% de cashback</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-clip"><div class="marquee" aria-hidden="true"><div class="track">
+  <span>zero frizz</span><span>alinha com precisão</span><span>nutre e hidrata</span><span>brilho imediato</span><span>não pesa</span><span>fragrância marcante</span>
+  <span>zero frizz</span><span>alinha com precisão</span><span>nutre e hidrata</span><span>brilho imediato</span><span>não pesa</span><span>fragrância marcante</span>
+</div></div></div>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="wrap sec-head rv-in">
+    <span class="eyebrow">Resultados reais</span>
+    <h2 class="serif">clean girl hair <em>em segundos</em></h2>
+    <p>Toque nos vídeos e veja o Sleek Kit em ação: fios alinhados, zero arrepiados e acabamento polido.</p>
+  </div>
+  <div class="reels rv-in" id="reels"></div>
+  <div class="reel-ctrl">
+    <button class="round" data-dir="-1" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="round" data-dir="1" aria-label="Próximo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section style="padding-top:20px">
+  <div class="wrap ba-wrap">
+    <div class="ba rv-in"><img src="https://viracosmeticos.com/cdn/shop/files/stick_antes_e_depois.webp?v=1773880248&width=1000" alt="Antes e depois do Frizz Control Hair Stick" loading="lazy"></div>
+    <div class="ba-copy rv-in">
+      <span class="eyebrow">Mais sobre o sleek kit</span>
+      <h2 class="serif">o kit completo para <em style="color:var(--purple)">dominar o frizz</em></h2>
+      <p>Com ação imediata, ele disciplina, finaliza e garante um visual mais polido sem deixar o cabelo pesado ou oleoso. Perfeito para todos os tipos de cabelo e para quem busca praticidade na rotina.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="4.7" data-dec="1">0</b><span>nota média</span></div>
+        <div class="stat"><b data-count="32">0</b><span>avaliações</span></div>
+        <div class="stat"><b data-count="13" data-suf="g">0</b><span>stick em bastão</span></div>
+      </div>
+      <a class="cta" href="#comprar">Quero zero frizz <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits" id="beneficios">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow">Por que funciona</span>
+      <h2 class="serif">4 motivos para <em>amar</em></h2>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-t="0">Alinha com precisão</button>
+      <button class="tab" data-t="1">Bloqueia o frizz</button>
+      <button class="tab" data-t="2">Nutrição e hidratação</button>
+      <button class="tab" data-t="3">Fragrância marcante</button>
+    </div>
+    <div class="panel-wrap rv-in">
+      <div class="panel on">
+        <div class="img"><img src="https://viracosmeticos.com/cdn/shop/files/24.webp?v=1760129978&width=1000" alt="Escova finalizadora" loading="lazy"></div>
+        <div class="txt"><span class="num">01</span><h3>alinha com precisão</h3>
+          <p>A escova finalizadora é o detalhe que faz toda diferença no resultado. Com cerdas firmes e formato compacto, ela ajuda a distribuir o produto de maneira uniforme, alinhar os fios e controlar até os arrepiados mais difíceis, garantindo um acabamento mais polido e natural.</p>
+          <div class="notes"><span>Cerdas firmes</span><span>Formato compacto</span><span>Acabamento polido</span></div></div>
+      </div>
+      <div class="panel">
+        <div class="img"><img src="https://viracosmeticos.com/cdn/shop/files/10_5cab63a3-22d9-40df-8fbb-04b0b4b9e87a.webp?v=1774384698&width=1000" alt="Frizz Control Hair Stick" loading="lazy"></div>
+        <div class="txt"><span class="num">02</span><h3>bloqueia o frizz</h3>
+          <p>Zero frizz com o Frizz Control Hair Stick, seu aliado para manter o cabelo perfeitamente alinhado ao longo do dia, mesmo em clima úmido. Em segundos, os fios ficam mais brilhantes e disciplinados. Alinhe e brilhe, do jeitinho que você gosta.</p>
+          <div class="notes"><span>Dura o dia todo</span><span>Resiste à umidade</span><span>Brilho imediato</span></div></div>
+      </div>
+      <div class="panel">
+        <div class="img"><img src="https://viracosmeticos.com/cdn/shop/files/11_c6bd7aba-7bde-4229-9236-ae525ee08a3c.webp?v=1774384698&width=1000" alt="Nutrição e hidratação" loading="lazy"></div>
+        <div class="txt"><span class="num">03</span><h3>nutrição e hidratação</h3>
+          <p>Cuide dos seus cabelos enquanto modela! O stick não só mantém seus fios no lugar, mas também nutre e hidrata profundamente. Diferente de outros fixadores que ressecam ou pesam, ele mantém a umidade ideal, deixando o cabelo suave, brilhante e sedoso, sem ficar pegajoso.</p>
+          <div class="notes"><span>Não resseca</span><span>Não pesa</span><span>Sem efeito pegajoso</span></div></div>
+      </div>
+      <div class="panel">
+        <div class="img"><img src="https://viracosmeticos.com/cdn/shop/files/36.png?v=1759610570&width=1000" alt="Fragrância" loading="lazy"></div>
+        <div class="txt"><span class="num">04</span><h3>fragrância marcante</h3>
+          <p>Aroma intenso com um toque de âmbar floral especial, sofisticado e inspirado na perfumaria fina. Notas vibrantes de cardamomo se encontram com o coração envolvente de ylang-ylang, enquanto a base quente de baunilha cria uma assinatura marcante e duradoura nos fios.</p>
+          <div class="notes"><span>Topo: cardamomo</span><span>Coração: ylang-ylang</span><span>Fundo: baunilha</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO -->
+<section id="como-usar">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow">Ritual em 3 passos</span>
+      <h2 class="serif">sleek em <em>1 minuto</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv-in"><div class="ph"><img src="https://viracosmeticos.com/cdn/shop/files/4.webp?v=1776691800&width=800" alt="" loading="lazy"></div>
+        <div class="bd"><h4>aplique o stick</h4><p>Deslize o bastão direto nos fios ou nos arrepiados, onde precisar de controle.</p></div></div>
+      <div class="step rv-in"><div class="ph"><img src="https://viracosmeticos.com/cdn/shop/files/8_e54d8b09-89fa-41a8-baf8-54524b820709.webp?v=1776691800&width=800" alt="" loading="lazy"></div>
+        <div class="bd"><h4>alinhe com a escova</h4><p>Use a escova finalizadora para distribuir o produto e alinhar os fios.</p></div></div>
+      <div class="step rv-in"><div class="ph"><img src="https://viracosmeticos.com/cdn/shop/files/7_d4f04870-f6a6-42ab-8231-82e149605c15.webp?v=1776651890&width=800" alt="" loading="lazy"></div>
+        <div class="bd"><h4>brilhe o dia todo</h4><p>Penteado fixo, fios hidratados e aquele acabamento clean girl que dura.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHIC BAND -->
+<div class="chic">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <img class="floaty f1" src="https://viracosmeticos.com/cdn/shop/files/Stick_e_escova.png?v=1776651890&width=500" alt="" loading="lazy">
+  <img class="floaty f2" src="https://viracosmeticos.com/cdn/shop/files/9_374c9664-5ad1-47cc-b88e-67090c74a60c.webp?v=1776651890&width=500" alt="" loading="lazy">
+  <h2 class="rv-in"><span>sleek</span><span><em>and chic</em></span><span>anytime</span></h2>
+  <a class="cta yellow rv-in" href="#comprar">Garantir meu kit <span class="price">-28%</span></a>
+</div>
+
+<!-- REVIEWS -->
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <span class="eyebrow">Experiências reais com Virá</span>
+      <h2 class="serif">quem usa, <em>aprova</em></h2>
+    </div>
+    <div class="rv-top rv-in" id="rvTop">
+      <div class="score"><b>4.7</b><span class="stars">★★★★★</span><small>32 avaliações verificadas</small>
+      </div>
+      <div class="ai"><span class="lbl">✦ Os clientes dizem</span>
+        <p>A cera reduz eficazmente o frizz e alinha o cabelo com um aroma maravilhoso. Os clientes disseram que “cumpre o que promete” e deixa os cabelos “perfeitamente alinhados”. A escova incluída é macia e essencial para a aplicação.</p></div>
+    </div>
+    <div class="rv-grid">
+      <div class="rv rv-in"><div class="who"><span class="av">B</span><div><div class="nm">Bruna</div><div class="stars" style="font-size:13px">★★★★★</div></div></div>
+        <h5>Ótimo</h5><p>Atendeu minhas expectativas, corri 5km e o cabelo continuou intacto, sem frizz!</p>
+        <div class="pics"><img src="https://m.media-amazon.com/images/I/81XGeBrzTWL._SY500.jpg" alt="Foto de cliente" loading="lazy"><img src="https://m.media-amazon.com/images/I/81PczQhGsuL._SY500.jpg" alt="Foto de cliente" loading="lazy"><img src="https://m.media-amazon.com/images/I/71vaqUyfZqL._SY500.jpg" alt="Foto de cliente" loading="lazy"></div></div>
+      <div class="rv rv-in"><div class="who"><span class="av">M</span><div><div class="nm">Maurilia B.</div><div class="vf">✔ Compra verificada</div></div></div>
+        <div class="stars" style="font-size:13px">★★★★★</div><p>Funciona mesmo! Não resseca e entrega o que diz, fixação perfeita. Maravilha.</p></div>
+      <div class="rv rv-in"><div class="who"><span class="av">A</span><div><div class="nm">Alexandra L.</div><div class="stars" style="font-size:13px">★★★★★</div></div></div>
+        <p>Eu gostei, ela é uma cera então realmente não vai ter o aspecto seco de um spray fixador que tem álcool. Ela fixa!</p></div>
+      <div class="rv rv-in"><div class="who"><span class="av">Â</span><div><div class="nm">Ângela A.</div><div class="vf">✔ Compra verificada</div></div></div>
+        <div class="stars" style="font-size:13px">★★★★★</div><h5>Excelente</h5></div>
+      <div class="rv rv-in" style="background:var(--lav);border:0"><div class="eyebrow">Destaques das avaliações</div>
+        <p style="font-size:22px;font-family:'DM Serif Display',serif;color:var(--purple-deep);line-height:1.2;margin-top:10px">“cumpre o que promete” · “perfeitamente alinhados” · “sem frizz”</p></div>
+    </div>
+    <div style="max-width:420px;margin:24px auto 0"><a class="cta" href="#comprar">Quero esse resultado <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--lav)">
+  <div class="wrap">
+    <div class="sec-head rv-in"><span class="eyebrow">Dúvidas</span><h2 class="serif">perguntas <em>frequentes</em></h2></div>
+    <div class="faq rv-in">
+      <details><summary>O que vem no Sleek Kit?<span class="pl">+</span></summary><p>O Stick Cera Fixadora Frizz Control em bastão (13g) e a Escova Finalizadora, para fixação e hidratação dos penteados.</p></details>
+      <details><summary>Serve para o meu tipo de cabelo?<span class="pl">+</span></summary><p>Sim! O kit é perfeito para todos os tipos de cabelo e para quem busca praticidade na rotina.</p></details>
+      <details><summary>Deixa o cabelo pesado ou oleoso?<span class="pl">+</span></summary><p>Não. Ele disciplina e finaliza sem pesar. Dica: comece com pouca quantidade e aumente se precisar.</p></details>
+      <details><summary>Como funciona o frete grátis?<span class="pl">+</span></summary><p>Frete grátis em compras acima de R$149,90 para Sul e Sudeste. Os combos de 2 e 3 ceras já incluem frete grátis nessas regiões.</p></details>
+      <details><summary>Nos combos vêm mais escovas?<span class="pl">+</span></summary><p>É uma escova por pedido: as unidades extras são só a cera. No combo de 3 ceras você ainda ganha a Ampola Glow Repair 15ml de brinde.</p></details>
+      <details><summary>Posso parcelar?<span class="pl">+</span></summary><p>Sim, em até 4x sem juros. E você ainda ganha 15% de cashback para a próxima compra.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" style="background:var(--lav);padding-top:0">
+  <div class="wrap">
+    <div class="card rv-in">
+      <div class="copy">
+        <span class="eyebrow">Black Antecipada · por tempo limitado</span>
+        <h2>seu cabelo <em>alinhado</em> o dia todo</h2>
+        <p>Leve 3 ceras + escova por R$ 199 e ganhe uma Ampola Glow Repair de brinde. Frete grátis para Sul e Sudeste.</p>
+        <a class="cta yellow pulse" href="#comprar">Aproveitar oferta <span class="price">R$ 199</span></a>
+      </div>
+      <div class="ph"><img src="https://viracosmeticos.com/cdn/shop/files/FOTOSSITEFINALIZADORES-2026_1500x1500px_3b61cda7-1cff-4a95-a3e1-23f8967b3a09.png?v=1776691800&width=900" alt="Sleek Kit" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="https://viracosmeticos.com/cdn/shop/files/vira_laranja.png?height=46&v=1752175466" alt="Virá">
+  © Virá Cosméticos · Proposta de redesign de landing page
+</footer>
+
+<div class="sticky" id="sticky">
+  <img src="https://viracosmeticos.com/cdn/shop/files/Stick_e_escova.png?v=1776651890&width=120" alt="">
+  <div class="tx"><b id="stName">Sleek Kit · 3 ceras + escova</b><span id="stPrice">R$ 199,00</span><s id="stWas">R$ 277,70</s></div>
+  <a class="cta" id="stBtn" href="https://viracosmeticos.com/products/kit-frizz-control-cera-escova?variant=43216499376243" target="_blank" rel="noopener">Comprar</a>
+</div>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const CDN='https://viracosmeticos.com/cdn/shop/files/';
+const IMGS=['Stick_e_escova.png?v=1776651890','7.webp?v=1776691800','4.webp?v=1776691800','8_e54d8b09-89fa-41a8-baf8-54524b820709.webp?v=1776691800','FOTOSSITEFINALIZADORES-2026_1500x1500px_3b61cda7-1cff-4a95-a3e1-23f8967b3a09.png?v=1776691800','7_d4f04870-f6a6-42ab-8231-82e149605c15.webp?v=1776651890','CARDSSITEFINALIZADORES-2026.webp?v=1786647586','9_374c9664-5ad1-47cc-b88e-67090c74a60c.webp?v=1776651890'];
+
+// gallery
+const stage=document.getElementById('stage'),thumbs=document.getElementById('thumbs');
+let gi=0;
+IMGS.forEach((s,i)=>{
+  const im=new Image();im.src=CDN+s+'&width=1100';im.alt='Sleek Kit Frizz Control';if(i===0)im.className='on';else im.loading='lazy';
+  stage.appendChild(im);
+  const b=document.createElement('button');b.innerHTML=`<img src="${CDN+s}&width=160" alt="" loading="lazy">`;if(!i)b.className='on';
+  b.onclick=()=>show(i);thumbs.appendChild(b);
+});
+function show(i){gi=(i+IMGS.length)%IMGS.length;stage.querySelectorAll('img').forEach((m,k)=>m.classList.toggle('on',k===gi));
+  thumbs.querySelectorAll('button').forEach((b,k)=>b.classList.toggle('on',k===gi));thumbs.children[gi].scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})}
+stage.querySelector('.prev').onclick=()=>show(gi-1);stage.querySelector('.next').onclick=()=>show(gi+1);
+let tx=0;stage.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+stage.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)show(gi+(d<0?1:-1))});
+
+// bundles
+const opts=[...document.querySelectorAll('.opt')];
+const names=['1 cera + escova','2 ceras + escova','3 ceras + escova'];
+function pick(o){opts.forEach(x=>x.classList.toggle('on',x===o));
+  const d=o.dataset;
+  document.getElementById('nowPrice').textContent='R$ '+d.now;
+  document.getElementById('wasPrice').textContent='R$ '+d.was;
+  document.getElementById('offTag').textContent=d.off;
+  document.getElementById('inst').innerHTML=d.inst;
+  document.getElementById('ctaPrice').textContent='R$ '+d.now;
+  document.getElementById('stPrice').textContent='R$ '+d.now;
+  document.getElementById('stWas').textContent='R$ '+d.was;
+  document.getElementById('stName').textContent='Sleek Kit · '+names[d.i];
+  const p=document.getElementById('nowPrice');p.animate([{transform:'scale(1.12)',color:'#6e3cdb'},{transform:'scale(1)'}],{duration:450,easing:'cubic-bezier(.2,.8,.2,1)'});
+}
+opts.forEach(o=>o.addEventListener('click',()=>pick(o)));
+pick(opts[2]);
+
+// countdown to midnight
+function tick(){const n=new Date(),e=new Date(n);e.setHours(23,59,59,999);let s=Math.max(0,(e-n)/1000|0);
+  const p=v=>String(v).padStart(2,'0');th.textContent=p(s/3600|0);tm.textContent=p((s%3600)/60|0);ts.textContent=p(s%60)}
+tick();setInterval(tick,1000);
+
+// reels
+const VIDS=[
+ ['84fe1fe42e0d41baab61a8b44e1181c1','84fe1fe42e0d41baab61a8b44e1181c1.HD-720p-1.6Mbps-96069469.mp4','v=1790816008'],
+ ['a5e6df8122d24172904e8621b401541f','a5e6df8122d24172904e8621b401541f.HD-720p-1.6Mbps-78180008.mp4','v=1773864143'],
+ ['7894c67f93d243db8ebe7ce4acf22abd','7894c67f93d243db8ebe7ce4acf22abd.SD-480p-0.9Mbps-61757223.mp4','v=1762368169'],
+ ['12dc7f1defd54492988b2436945a1877','12dc7f1defd54492988b2436945a1877.HD-720p-4.5Mbps-78180007.mp4','v=1773864138'],
+ ['31715535794a49e2a011bac12bb6fb01','31715535794a49e2a011bac12bb6fb01.HD-720p-4.5Mbps-78180474.mp4','v=1773864456'],
+ ['f32a5507163f4afba2027ac46fe460bc','f32a5507163f4afba2027ac46fe460bc.HD-720p-4.5Mbps-78183034.mp4','v=1773865825']];
+const labels=['Clean girl em 1 min','Dica prática','Zero arrepiados','Sleek bun','Antes × depois','Rotina rápida'];
+const reels=document.getElementById('reels');
+const mutedIco='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6" stroke="currentColor" stroke-width="2"/></svg>';
+const sndIco='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7M19 5a10 10 0 010 14" stroke="currentColor" stroke-width="2" fill="none"/></svg>';
+VIDS.forEach(([id,f,v],i)=>{
+  const el=document.createElement('div');el.className='reel';
+  el.innerHTML=`<video playsinline loop muted preload="none" poster="https://cdn.shopify.com/s/files/1/0660/3522/0595/files/preview_images/${id}.thumbnail.0000000000.jpg?${v}&width=500" src="https://cdn.shopify.com/videos/c/vp/${id}/${f}"></video>
+  <div class="play"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="#6e3cdb"><path d="M8 5v14l11-7z"/></svg></i></div>
+  <span class="lbl">▶ ${labels[i]}</span><button class="snd" aria-label="Som">${mutedIco}</button>`;
+  const vid=el.querySelector('video'),snd=el.querySelector('.snd');
+  el.addEventListener('click',e=>{
+    if(e.target.closest('.snd')){vid.muted=!vid.muted;snd.innerHTML=vid.muted?mutedIco:sndIco;return}
+    if(vid.paused){reels.querySelectorAll('video').forEach(o=>{if(o!==vid){o.pause();o.closest('.reel').classList.remove('playing')}});
+      vid.muted=false;snd.innerHTML=sndIco;vid.play();el.classList.add('playing')}
+    else{vid.pause();el.classList.remove('playing')}
+  });
+  reels.appendChild(el);
+});
+document.querySelectorAll('.reel-ctrl .round').forEach(b=>b.onclick=()=>reels.scrollBy({left:b.dataset.dir*280,behavior:'smooth'}));
+
+// benefit tabs
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+let ti=0,tTimer;
+function setTab(i){ti=i;tabs.forEach((t,k)=>t.classList.toggle('on',k===i));panels.forEach((p,k)=>p.classList.toggle('on',k===i))}
+tabs.forEach((t,i)=>t.onclick=()=>{setTab(i);clearInterval(tTimer)});
+tTimer=setInterval(()=>setTab((ti+1)%4),6000);
+
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+  e.target.querySelectorAll('[data-count]').forEach(c=>{const to=+c.dataset.count,dec=+(c.dataset.dec||0),suf=c.dataset.suf||'';let t0;
+    const step=t=>{t0??=t;const k=Math.min(1,(t-t0)/1200),v=to*(1-Math.pow(1-k,3));c.textContent=v.toFixed(dec)+suf;if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)})
+}),{threshold:.15});
+document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+
+// sticky bar: show after hero buy button scrolls out
+const sticky=document.getElementById('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0),{threshold:0}).observe(document.getElementById('buyBtn'));
+
+// lightbox
+const lb=document.getElementById('lb');
+document.querySelectorAll('.rv .pics img').forEach(i=>i.onclick=()=>{lb.querySelector('img').src=i.src.replace('_SY500','_SY1000');lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+
+</script>
+</body>
+</html>
